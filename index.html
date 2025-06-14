@@ -1,0 +1,333 @@
+<!-- START OF HTML -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spotify Clone</title>
+  
+  <link rel="stylesheet" href="style.css" />
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+
+
+<style>
+  body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #121212;
+    color: #FFFFFF;
+  }
+
+  .sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #121212;
+    padding: 20px;
+  }
+
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1DB954;
+    margin-bottom: 30px;
+  }
+
+  .nav-links, .playlist {
+    list-style: none;
+    padding: 0;
+  }
+
+  .nav-links li, .playlist li {
+    margin: 15px 0;
+    font-size: 16px;
+  }
+
+  .nav-links li a {
+    color: #B3B3B3;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-links li a:hover {
+    color: #FFFFFF;
+  }
+
+  .nav-links li i, .install-app i {
+    margin-right: 10px;
+  }
+
+  .playlist li {
+    color: #B3B3B3;
+    cursor: pointer;
+  }
+
+  .playlist li:hover {
+    color: #FFFFFF;
+  }
+
+  .install-app {
+    margin-top: 30px;
+    color: #B3B3B3;
+    cursor: pointer;
+  }
+
+  .install-app:hover {
+    color: #FFFFFF;
+  }
+</style>
+
+  <div class="app">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <h1 class="logo">Spotify</h1>
+      </div>
+      <nav class="main-nav">
+        <a href="#" class="nav-item active"><i class="fas fa-home"></i><span>Home</span></a>
+        <a href="#" class="nav-item"><i class="fas fa-search"></i><span>Search</span></a>
+        <a href="#" class="nav-item"><i class="fas fa-book"></i><span>Your Library</span></a>
+      </nav>
+      <div class="create-playlist">
+        <button class="playlist-btn"><i class="fas fa-plus"></i><span>Create Playlist</span></button>
+        <button class="playlist-btn"><i class="fas fa-heart"></i><span>Liked Songs</span></button>
+        <button class="playlist-btn"><i class="fas fa-download"></i><span>Your Episodes</span></button>
+      </div>
+      <div class="divider"></div>
+      <div class="playlists-section">
+        <div class="playlist-item">Liked Songs</div>
+        <div class="playlist-item">Recently Played</div>
+        <div class="playlist-item">My Playlist #1</div>
+        <div class="playlist-item">Discover Weekly</div>
+        <div class="playlist-item">Release Radar</div>
+        <div class="playlist-item">Chill Vibes</div>
+        <div class="playlist-item">Workout Mix</div>
+        <div class="playlist-item">Road Trip Hits</div>
+      </div>
+      <div class="install-app">
+        <a href="#" class="install-link"><i class="fas fa-download"></i><span>Install App</span></a>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="topbar">
+        <div class="nav-arrows">
+          <button class="nav-btn"><i class="fas fa-chevron-left"></i></button>
+          <button class="nav-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="search-bar">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="What do you want to listen to?" />
+        </div>
+       <div class="user-actions">
+  <a href="signup.html" class="signup-btn">Sign up</a>
+  <a href="login.html" class="login-btn">Log in</a>
+  <button class="user-btn"><i class="fas fa-user"></i></button>
+</div>
+
+      </div>
+
+      <main class="content-area">
+        <h1 class="greeting" id="greeting">Good evening</h1>
+
+        <!-- Quick Access -->
+        <div class="quick-access">
+          <div class="quick-item">
+            <div class="quick-image"><img src="liked.jpeg" alt="Liked Songs" /></div>
+            <span>Liked Songs</span>
+            <button class="play-btn"><i class="fas fa-play"></i></button>
+          </div>
+          <div class="quick-item">
+            <div class="quick-image"><img src="discove-weekly.jpeg" alt="Discover Weekly" /></div>
+            <span>Discover Weekly</span>
+            <button class="play-btn"><i class="fas fa-play"></i></button>
+          </div>
+          <div class="quick-item">
+            <div class="quick-image"><img src="release-radar.jpeg" alt="Release Radar" /></div>
+            <span>Release Radar</span>
+            <button class="play-btn"><i class="fas fa-play"></i></button>
+          </div>
+          <div class="quick-item">
+            <div class="quick-image"><img src="chill-vibes.jpeg" alt="Chill Vibes" /></div>
+            <span>Chill Vibes</span>
+            <button class="play-btn"><i class="fas fa-play"></i></button>
+          </div>
+          <div class="quick-item">
+            <div class="quick-image"><img src="workout-mix.jpeg" alt="Workout Mix" /></div>
+            <span>Workout Mix</span>
+            <button class="play-btn"><i class="fas fa-play"></i></button>
+          </div>
+          <div class="quick-item">
+            <div class="quick-image"><img src="road-trip.jpeg" alt="Road Trip Hits" /></div>
+            <span>Road Trip Hits</span>
+            <button class="play-btn"><i class="fas fa-play"></i></button>
+          </div>
+        </div>
+
+
+        <!-- Made for You -->
+         <!-- Made For You Section -->
+<section class="section">
+  <div class="section-header">
+    <h2>Made for You</h2>
+    <button class="show-all">Show all</button>
+  </div>
+
+  <div class="cards-grid">
+    <div class="card">
+      <div class="card-image"><img src="RRR.jpeg" alt="RRR" /></div>
+      <button class="card-play-btn"><i class="fas fa-play"></i></button>
+      <h3>RRR</h3>
+      <p>Top hits from the epic blockbuster</p>
+    </div>
+
+    <div class="card">
+      <div class="card-image"><img src="varsham.jpeg" alt="Varsham" /></div>
+      <button class="card-play-btn"><i class="fas fa-play"></i></button>
+      <h3>Varsham</h3>
+      <p>Romantic and rain-kissed melodies that made this classic unforgettable.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-image"><img src="rangasthalam.jpeg" alt="Rangasthalam" /></div>
+      <button class="card-play-btn"><i class="fas fa-play"></i></button>
+       <h3>Rangasthalam</h3>
+      <p>Rustic tunes and raw energy from the soulful village drama.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-image"><img src="pushpa.jpg" alt="Pushpa" /></div>
+      <button class="card-play-btn"><i class="fas fa-play"></i></button>
+       <h3>Pushpa</h3>
+      <p>Folk-infused anthems and rugged rhythms from Allu Arjun's action saga.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-image"><img src="ala-vaikunthapurramuloo.jpeg" alt="Ala Vaikunthapurramuloo" /></div>
+      <button class="card-play-btn"><i class="fas fa-play"></i></button>
+      <h3>Ala Vaikunthapurramuloo</h3>
+      <p>Catchy and stylish hits from Trivikram-Allu Arjun’s musical blockbuster.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-image"><img src="Amaran.jpg" alt="Amaran" /></div>
+      <button class="card-play-btn"><i class="fas fa-play"></i></button>
+      <h3>Amaran</h3>
+      <p>Stirring patriotic tunes and emotional depth from Sivakarthikeyan’s latest.</p>
+    </div>
+  </div>
+</section>
+
+      
+        
+
+        <!-- Popular Artists -->
+        <section class="section">
+          <div class="section-header">
+            <h2>Popular artists</h2>
+            <button class="show-all">Show all</button>
+          </div>
+
+
+
+          <div class="cards-grid">
+  <div class="card">
+    <div class="card-image artist-image">
+      <img src="sid-sriram.jpeg" alt="Sid Sriram" />
+    </div>
+    <button class="card-play-btn"><i class="fas fa-play"></i></button>
+    <h3>Sid Sriram</h3>
+    <p>Artist</p>
+  </div>
+  
+  <div class="card">
+    <div class="card-image artist-image">
+      <img src="shreya.jpeg" alt="Shreya Ghoshal" />
+    </div>
+    <button class="card-play-btn"><i class="fas fa-play"></i></button>
+    <h3>Shreya Ghoshal</h3>
+    <p>Artist</p>
+  </div>
+
+  <div class="card">
+    <div class="card-image artist-image">
+      <img src="spb.jpeg" alt="SP Balasubrahmanyam" />
+    </div>
+    <button class="card-play-btn"><i class="fas fa-play"></i></button>
+    <h3>SP Balu</h3>
+    <p>Legendary Artist</p>
+  </div>
+
+  <div class="card">
+    <div class="card-image artist-image">
+      <img src="dsp.jpeg" alt="Devi Sri Prasad" />
+    </div>
+    <button class="card-play-btn"><i class="fas fa-play"></i></button>
+    <h3>Devi Sri Prasad</h3>
+    <p>Music Director</p>
+  </div>
+
+  <div class="card">
+    <div class="card-image artist-image">
+      <img src="chinmayi.jpg" alt="Chinmayi Sripada" />
+    </div>
+    <button class="card-play-btn"><i class="fas fa-play"></i></button>
+    <h3>Chinmayi Sripada</h3>
+    <p>Artist</p>
+  </div>
+
+  <div class="card">
+    <div class="card-image artist-image">
+      <img src="harika.jpg" alt="Harika Narayan" />
+    </div>
+    <button class="card-play-btn"><i class="fas fa-play"></i></button>
+    <h3>Harika Narayan</h3>
+    <p>Artist</p>
+  </div>
+</div>
+
+  <!-- Music Player -->
+  <div class="music-player">
+    <div class="now-playing">
+      <div class="track-image"><img src="images/blinding-lights.jpg" alt="Blinding Lights" /></div>
+      <div class="track-info">
+        <div class="track-name">Blinding Lights</div>
+        <div class="artist-name">The Weeknd</div>
+      </div>
+      <button class="like-btn"><i class="fas fa-heart"></i></button>
+    </div>
+
+    <div class="player-controls">
+      <div class="control-buttons">
+        <button class="control-btn"><i class="fas fa-random"></i></button>
+        <button class="control-btn"><i class="fas fa-step-backward"></i></button>
+        <button class="play-pause-btn"><i class="fas fa-play"></i></button>
+        <button class="control-btn"><i class="fas fa-step-forward"></i></button>
+        <button class="control-btn"><i class="fas fa-redo"></i></button>
+      </div>
+      <div class="progress-bar">
+        <span class="time-current">1:23</span>
+        <div class="progress-track"><div class="progress-fill"></div></div>
+        <span class="time-total">4:15</span>
+      </div>
+    </div>
+
+    <div class="volume-controls">
+      <button class="control-btn"><i class="fas fa-microphone"></i></button>
+      <button class="control-btn"><i class="fas fa-list"></i></button>
+      <button class="control-btn"><i class="fas fa-laptop"></i></button>
+      <div class="volume-slider">
+        <i class="fas fa-volume-up"></i>
+        <div class="volume-track"><div class="volume-fill"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<!-- END OF HTML -->
